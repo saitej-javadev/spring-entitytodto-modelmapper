@@ -1,15 +1,24 @@
 # spring-entitytodto-modelmapper
 
 # To Configure ModelMapper 
-add Maven dependency as below in pom.xml file
-   <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>3.1.0</version>
-        </dependency>
+_STEP-1_    **Add Maven dependency as below in pom.xml file**
+<pre>
+<code>
+   &lt;dependency&gt;
+               &lt;groupId&gt;org.modelmapper&lt;/groupId&gt;
+               &lt;artifactId&gt;modelmapper&lt;/artifactId&gt;
+               &lt;version&gt;3.1.0&lt;/version&gt;
+           &lt;/dependency&gt;
+</code>
+</pre>
 
-and make ModelMapper as Spring Bean with @Bean using java configuration .
------------------------------sample example ---------------------
+_STEP-1_
+**And make ModelMapper as Spring Bean with @Bean using java configuration** .
+
+
+**-----------------------------sample example ---------------------**
+<pre>
+<code>
 @Component
 public class Convert {
 
@@ -23,4 +32,5 @@ public class Convert {
         return this.modelMapper.map(product,ProductDTO.class);
     }
 }
-    
+  </code>
+  </pre>  
